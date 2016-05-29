@@ -1,0 +1,9 @@
+login:- username, password
+token:- generate tokne number validate user.
+signup:- first name , lastname, mobilenumber,usename,emailid.
+inbox:-id,subject,message,date,
+sent:-id,
+drafts:-id,
+trash:-id,
+compose:-
+[to,from,message]
