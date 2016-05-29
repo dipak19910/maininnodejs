@@ -18,7 +18,11 @@ function getIp(){
 	if(numberOfIP.length===1){
 		return "127.0.0.1"	
 	}else{
-		var ipInfo=ip["wlan0"];
+		for(var key in ip){
+			if(key==="lo"){
+				continue;
+			}
+		var ipInfo=ip[key];
 		for (var i = 0; i < ipInfo.length; i++) {
 			var ipDetails=ipInfo[i];
 			if (ipDetails["family"]=== "IPv4") {
@@ -26,6 +30,7 @@ function getIp(){
 			};
 
 		};
+		}
 	}
 
 }
