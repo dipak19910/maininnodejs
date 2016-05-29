@@ -1,17 +1,16 @@
 var express=require('express');
 var bodyParser=require('body-parser');
+var rest=require("./lib/rest/ParseBody")
 var app=express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// var routes = require("./routes/routes.js")(app);
-
+var routes = require("./routes/routes.js")(app);
 var server = app.listen(3000, function () {
-	console.log("Listening on "+getIp()+":"+server.address().port);
+	console.log("Listening on "+rest.getIp()+":"+server.address().port);
 });
 
 function getIp(){
-
 	var os=require('os')
 	var ip=os.networkInterfaces();
 	var numberOfIP=Object.keys(ip);

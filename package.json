@@ -18,6 +18,8 @@
   "homepage": "https://github.com/dipak19910/maininnodejs#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongodb": "^2.1.20",
+    "q": "^1.4.1"
   }
 }
